@@ -3,6 +3,9 @@ body{
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .barra{
@@ -11,13 +14,13 @@ body{
 }
 
 .menu{
-    background-color:  #154360;
+    background-color:  #01295C;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 95px;
-    border: #002339 2px solid;
+    border: #063672 2px solid;
     border-radius: 30px;
 }
 
@@ -28,7 +31,7 @@ body{
     margin: 0;
     padding: 0;
     border-radius: 50px;
-    border: 10px solid #002339;
+    border: 10px solid #063672;
 }
 
 .menu ul{
@@ -53,21 +56,50 @@ body{
     background-color: #555;
 }
 
-.desplegable{
-    position: relative;
-    z-index: 100;
+/*Redimensionamiento Tablets*/
+@media screen and (min-width: 600px)
+{
+    body{
+        font-size: 15px;
+    }
 }
 
-.contenidodesplegable{
-    display: none;
-    position: absolute;
-    background-color: #0064A2;
-    border-radius: 25px;
-    min-width: 160px;
-    box-shadow: 0 8px 16px #0064A2;
-    z-index: 100;
+/*Redimensionamiento PC*/
+@media screen and (min-width: 1024px)
+{
+    body{
+        font-size: 18px;
+    }
 }
 
-.desplegable:hover .contenidodesplegable{
-    display: block;
+.piepagina{
+    text-align: center;
+    font-size: small;
+    padding: 20px;
+    background-color: #01295C;
+    color:white;
+    height: 75px;
 }
+
+.piepagina img{
+    height: 75px;
+    float: left;
+    border-color: 2px solid white;
+}
+
+.piepagina div img{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.piepagina .redes{
+    text-align: center;
+    float: right;
+}
+
+.piepagina .redes img{
+    display: inline-block;
+}
+
