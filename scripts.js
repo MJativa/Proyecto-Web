@@ -9,3 +9,7 @@ function redimensionar(){
 
 window.addEventListener('resize', redimensionar);
 redimensionar();
+
+function refrescarpagina(){
+    location.reload();
+}
