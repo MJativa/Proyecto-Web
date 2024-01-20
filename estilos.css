@@ -113,3 +113,41 @@ body .paginicio img{
     display: inline-block;
 }
 
+/*PAGINA QUIENESOMOS.HTML*/
+
+.menu a.elementosquien:hover{
+    background-color: #138D75;
+    border-radius: 25px;
+}
+
+
+
+/*PAGINA NOTICIAS.HTML*/
+
+.menu a.elementosnoticias:hover{
+    background-color: #EF7257;
+    border-radius: 25px;
+}
+
+
+/*PAGINA CITAS.HTML*/
+
+.menu a.elementoscitas:hover{
+    background-color: #C080FF;
+    border-radius: 25px;
+}
+
+
+/*PAGINA CONTACTO.HTML*/
+
+.menu a.elementoscontacto:hover{
+    background-color: #873600;
+    border-radius: 25px;
+}
+
+/*PAGINA PORTAL.HTML*/
+
+.menu a.elementosportal:hover{
+    background-color: #D4AC0D;
+    border-radius: 25px;
+}
