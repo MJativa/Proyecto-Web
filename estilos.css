@@ -72,6 +72,15 @@ body{
     }
 }
 
+body .paginicio{
+    padding: 20px;
+    text-align: center;
+}
+
+body .paginicio img{
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.8);
+}
+
 .piepagina{
     text-align: center;
     font-size: small;
