@@ -52,8 +52,9 @@ body{
     display: block;
 }
 
-.menu a:hover{
-    background-color: #555;
+.menu a.elementos:hover{
+    background-color: #0C58B8;
+    border-radius: 25px;
 }
 
 /*Redimensionamiento Tablets*/
