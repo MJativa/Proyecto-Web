@@ -5,11 +5,30 @@ body{
     padding: 0;
 }
 
+.barra{
+    height: 5px;
+    background-color: white;
+}
+
 .menu{
     background-color:  #154360;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    border: #002339 2px solid;
+    border-radius: 30px;
+}
+
+
+.logo img{
+    height: 100px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    border: 10px solid #002339;
 }
 
 .menu ul{
@@ -36,15 +55,17 @@ body{
 
 .desplegable{
     position: relative;
+    z-index: 100;
 }
 
 .contenidodesplegable{
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #0064A2;
+    border-radius: 25px;
     min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    box-shadow: 0 8px 16px #0064A2;
+    z-index: 100;
 }
 
 .desplegable:hover .contenidodesplegable{
