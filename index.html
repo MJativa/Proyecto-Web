@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CoDental - Tu Sonrisa, Nuestra Prioridad</title>
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-    <body>
-        <script src="scripts.js"></script>
-        <div class="barra"></div>
-        <nav class="menu">
-            <div class="logo">
-                <a href="#" onclick="refrescarpagina()"><img src="CoDental.png" alt="Logo de Consultorio"></a>
-            </div>
-            <ul>
-                <li><a href="quiensomos.html" class="elementos">Quienes Somos</a></li>
-                <li><a href="noticias.html" class="elementos">Noticias</a></li>
-                <li><a href="citas.html" class="elementos">Citas</a></li>
-                <li><a href="contacto.html" class="elementos">Contacto</a></li>
-                <li><a href="portal.html" class="elementos">Portal</a></li>
-                </li>
-            </ul>
-        </nav>
-        <div class="paginicio">
-            <img id="inicio" src="imageninicio.png" alt="Inicio de Pagina">
+
+<head>
+    <title>CoDental - Tu Sonrisa, Nuestra Prioridad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <script src="scripts.js"></script>
+    <div class="barra"></div>
+    <nav class="menu">
+        <div class="logo">
+            <a href="#" onclick="refrescarpagina()"><img src="CoDental.png" alt="Logo de Consultorio"></a>
         </div>
-        <footer class="piepagina">
-            <img src="CoDentalPie.png" alt="Pie de Página">
-            <div>
-                <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png" alt="facebook"></a>
-                <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png" alt="instagram"></a>
-                <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
-                    <br>
-                    Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
-                    <br>
-                </p>
-            </div>
-        </footer>
-    </body>
+        <ul>
+            <li><a href="quiensomos.html" class="elementos">Quienes Somos</a></li>
+            <li><a href="noticias.html" class="elementos">Noticias</a></li>
+            <li><a href="citas.html" class="elementos">Citas</a></li>
+            <li><a href="contacto.html" class="elementos">Contacto</a></li>
+            <li><a href="portal.html" class="elementos">Portal</a></li>
+            </li>
+        </ul>
+    </nav>
+    <div class="paginicio">
+        <img id="inicio" src="imageninicio.png" alt="Inicio de Pagina">
+    </div>
+    <div class="contenedorsecciones">
+        <section class="secciondoctores">
+            <a href="doctores.html" class="seccionenlace">
+                <img src="doctoreslogo.png" alt="Simbolo de Doctores">
+                <h1>Doctores</h1>
+                <p>&nbsp;&nbsp;Nuestro equipo de expertos está listo para cuidar de tu sonrisa. Explora la experiencia única que ofrecen nuestros dedicados doctores en CoDental&nbsp;&nbsp;</p>
+            </a>
+        </section>
+        <section class="seccionubicacion">
+            <a href="ubicacion.html" class="seccionenlace">
+                <img src="ubicacionlogo.png" alt="Simbolo de Ubicación">
+                <h1>Ubicaci&oacute;n</h1>
+                <p>&nbsp;&nbsp;Tu camino hacia una sonrisa perfecta comienza aquí. Encuéntranos de manera precisa y experimenta la comodidad de nuestras instalaciones&nbsp;&nbsp;</p>
+            </a>
+        </section>
+    </div>
+    <section class="seccioncita">
+                <img src="citalogo.png" alt="Simbolo de Cita">
+                <h1>Separa tu Cita</h1><br>
+                <h2>¡Descubre cómo transformamos sonrisas! Formula tu cita personalizada y comienza tu viaje hacia una salud bucodental óptima.</h2><br>
+                <button id="botoncitas" onclick="window.location.href='citas.html'">¡Agenda tu Cita Ahora!</button>
+    </section>
+            <footer class="piepagina">
+                <img src="CoDentalPie.png" alt="Pie de Página">
+                <div>
+                    <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png"
+                            alt="facebook"></a>
+                    <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png"
+                            alt="instagram"></a>
+                    <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
+                        <br>
+                        Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
+                        <br>
+                    </p>
+                </div>
+            </footer>
+</body>
+
 </html>
