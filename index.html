@@ -4,6 +4,8 @@
 <head>
     <title>CoDental - Tu Sonrisa, Nuestra Prioridad</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="ruta/a/tu/fotorama/fotorama.css">
+    <script src="ruta/a/tu/fotorama/fotorama.js"></script>
 </head>
 
 <body>
@@ -16,7 +18,6 @@
         <ul>
             <li><a href="quiensomos.html" class="elementos">Quienes Somos</a></li>
             <li><a href="noticias.html" class="elementos">Noticias</a></li>
-            <li><a href="citas.html" class="elementos">Citas</a></li>
             <li><a href="contacto.html" class="elementos">Contacto</a></li>
             <li><a href="portal.html" class="elementos">Portal</a></li>
             </li>
@@ -30,37 +31,63 @@
             <a href="doctores.html" class="seccionenlace">
                 <img src="doctoreslogo.png" alt="Simbolo de Doctores">
                 <h1>Doctores</h1>
-                <p>&nbsp;&nbsp;Nuestro equipo de expertos está listo para cuidar de tu sonrisa. Explora la experiencia única que ofrecen nuestros dedicados doctores en CoDental&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;Nuestro equipo de expertos está listo para cuidar de tu sonrisa. Explora la experiencia
+                    única que ofrecen nuestros dedicados doctores en CoDental&nbsp;&nbsp;</p>
             </a>
         </section>
         <section class="seccionubicacion">
             <a href="ubicacion.html" class="seccionenlace">
                 <img src="ubicacionlogo.png" alt="Simbolo de Ubicación">
                 <h1>Ubicaci&oacute;n</h1>
-                <p>&nbsp;&nbsp;Tu camino hacia una sonrisa perfecta comienza aquí. Encuéntranos de manera precisa y experimenta la comodidad de nuestras instalaciones&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;Tu camino hacia una sonrisa perfecta comienza aquí. Encuéntranos de manera precisa y
+                    experimenta la comodidad de nuestras instalaciones&nbsp;&nbsp;</p>
             </a>
         </section>
     </div>
     <section class="seccioncita">
-                <img src="citalogo.png" alt="Simbolo de Cita">
-                <h1>Separa tu Cita</h1><br>
-                <h2>¡Descubre cómo transformamos sonrisas! Formula tu cita personalizada y comienza tu viaje hacia una salud bucodental óptima.</h2><br>
-                <button id="botoncitas" onclick="window.location.href='citas.html'">¡Agenda tu Cita Ahora!</button>
+        <img src="citalogo.png" alt="Simbolo de Cita">
+        <h1>Separa tu Cita</h1><br>
+        <h2>¡Descubre cómo transformamos sonrisas! Formula tu cita personalizada y comienza tu viaje hacia una salud
+            bucodental óptima.</h2><br>
+        <button id="botoncitas" onclick="window.location.href='citas.html'">¡Agenda tu Cita Ahora!</button>
     </section>
-            <footer class="piepagina">
-                <img src="CoDentalPie.png" alt="Pie de Página">
-                <div>
-                    <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png"
-                            alt="facebook"></a>
-                    <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png"
-                            alt="instagram"></a>
-                    <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
-                        <br>
-                        Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
-                        <br>
-                    </p>
-                </div>
-            </footer>
+    <div class="galeria">
+        <div class="imagen">
+            <img src="consultorioodontologico1.jpg" alt="Consultorio 1" onclick="mostrarImagen(this)">
+        </div>
+        <div class="imagen">
+            <img src="consultorioodontologico2.jpg" alt="Consultorio 2" onclick="mostrarImagen(this)">
+        </div>
+        <div class="imagen">
+            <img src="consultorioodontologico3.jpg" alt="Consultorio 3" onclick="mostrarImagen(this)">
+        </div>
+        <div class="imagen">
+            <img src="consultorioodontologico4.jpg" alt="Consultorio 4" onclick="mostrarImagen(this)">
+        </div>
+        <div class="imagen">
+            <img src="consultorioodontologico5.jpg" alt="Consultorio 5" onclick="mostrarImagen(this)">
+        </div>
+        <div class="imagen">
+            <img src="consultorioodontologico6.jpg" alt="Consultorio 5" onclick="mostrarImagen(this)">
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="contenido" id="imagenModal">
+    </div>
+    <footer class="piepagina">
+        <img src="CoDentalPie.png" alt="Pie de Página">
+        <div>
+            <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png"
+                    alt="facebook"></a>
+            <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png"
+                    alt="instagram"></a>
+            <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
+                <br>
+                Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
+                <br>
+            </p>
+        </div>
+    </footer>
 </body>
-
 </html>
