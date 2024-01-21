@@ -257,6 +257,7 @@ body .paginicio img{
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
+    font-size: 30px;
 }
 
 .piepagina{
@@ -448,13 +449,17 @@ body .paginicio img{
     box-sizing: border-box;
 }
 
-#envio{
+.envio{
     background-color:#01295C;
     color: #FBEEE6;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    display: block;
 }
 
 /*PAGINA CONTACTO.HTML*/
