@@ -90,6 +90,96 @@ body .paginicio img{
     box-shadow: 0px 4px 8px rgba(0,0,0,0.8);
 }
 
+.contenedorsecciones{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.secciondoctores{
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: #FBEEE6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #01295C;
+    width: 45%;
+}
+
+.seccionubicacion{
+    padding: 20px;
+    margin: 20px 10px;
+    background-color: #FBEEE6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #01295C;
+    width: 45%;
+}
+
+.secciondoctores h1, .seccionubicacion h1{
+    color: #01295C;
+    text-align: center;
+    font-size: 40px;
+}
+
+.secciondoctores img, .seccionubicacion img, .seccioncita img{
+    height: 150px;
+    width: 150px;
+}
+
+.seccionenlace{
+    text-decoration: none;
+    color: #01295C;
+    transition: box-shadow 0.3s;
+}
+
+.seccionenlace:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.seccioncita{
+    background-color: #01295C;
+    border-color: black;
+    color:#FBEEE6;
+    width: auto;
+    height: auto;
+    border: 20px solid #1A5276;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: small;
+}
+
+.seccioncita h1{
+    color:#FBEEE6;
+    text-align: center;
+    font-size: 35px;
+}
+
+#botoncitas{
+    background-color: #0AB0D9;
+    color: #FBEEE6;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#botoncitas:hover{
+    background-color: #12AF0D;
+}
+
 .piepagina{
     text-align: center;
     font-size: small;
