@@ -30,8 +30,8 @@ body{
     height: 95px;
     border: #063672 2px solid;
     border-radius: 30px;
+    width: 100%;
 }
-
 
 .logo img{
     height: 100px;
@@ -79,6 +79,24 @@ body{
     body{
         font-size: 18px;
     }
+}
+
+.paginicio{
+    position: relative;
+    overflow: hidden;
+}
+
+.superpuesto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #01295C;
+}
+
+.superpuesto p{
+    font-size: 80px;
 }
 
 body .paginicio{
@@ -230,6 +248,17 @@ body .paginicio img{
     cursor: pointer;
 }
 
+.textoimagenes{
+    background-color: #FBEEE6;
+    color: #01295C;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
 .piepagina{
     text-align: center;
     font-size: small;
@@ -263,8 +292,6 @@ body .paginicio img{
 
 /*PAGINA QUIENESOMOS.HTML*/
 
-
-
 .menu a.elementosquien:hover{
     background-color: #138D75;
     border-radius: 25px;
@@ -287,6 +314,7 @@ body .paginicio img{
     color: white;
     font-size: 400%;
 }
+
 .seccionesquien{
     background-color: #FBEEE6;
     padding: 20px;
@@ -385,6 +413,49 @@ body .paginicio img{
     border-radius: 25px;
 }
 
+.seccion-indicaciones, .seccion-formulario {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #FBEEE6;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: #01295C;
+}
+
+.seccion-indicaciones h2, .seccion-formulario h2 {
+    color: #01295C;
+}
+
+.seccion-formulario form{
+    max-width: 600px;
+    margin: auto;
+}
+
+.columnas{
+    flex: 1;
+}
+
+.columna label{
+    display: block;
+    margin-bottom: 5px;
+    color: #01295C;
+}
+
+.columna input, .columna textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+#envio{
+    background-color:#01295C;
+    color: #FBEEE6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /*PAGINA CONTACTO.HTML*/
 
