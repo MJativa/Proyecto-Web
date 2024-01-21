@@ -135,16 +135,10 @@ body .paginicio img{
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
     color: #01295C;
-}
-
-.seccionesquiender{
-    background-color: #FBEEE6;
-    padding: 20px;
-    margin: 5%;
-    border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    text-align: right;
-    color: #01295C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }
 
 .titulosquien{
@@ -157,9 +151,16 @@ body .paginicio img{
 }
 
 .imagenquien img{
-    max-width: 100%;
-    height: auto;
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
 }
+
+.contenedorlogo img{
+    height: 200px;
+    width: 200px;
+}
+
 
 
 
