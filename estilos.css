@@ -290,6 +290,43 @@ body .paginicio img{
     border-radius: 25px;
 }
 
+.titulos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px ,20xp ,20px ,20px;
+    padding: 10%;
+    text-align: center;
+    
+}
+
+.titulo {
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+    padding: 15px; 
+    background-color: #FBEEE6;
+    border-radius: 25px;
+}
+.titulo img {
+    max-width: 200px; 
+    min-width: 100px;
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+
+/* Estilos adicionales para hacerlo responsive */
+@media (max-width: 768px) {
+    
+    .titulos {
+        flex-direction: column;
+    }
+
+    .titulo {
+        width: 100%;
+    }
+}
 
 /*PAGINA CITAS.HTML*/
 
