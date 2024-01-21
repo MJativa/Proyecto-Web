@@ -204,15 +204,17 @@ body .paginicio img{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 20px ,20xp ,20px ,20px;
+    padding: 10%;
+    text-align: center;
+    
 }
 
 .titulo {
-    width: 45%;
+    width: 35%;
     text-align: center;
-    margin-bottom: 20px;
-    margin: rgb(82, 80, 80);
-    padding: 10px; /* Padding to create space between content and border */
+    margin: 10px;
+    padding: 15px; 
     background-color: #FBEEE6;
     border-radius: 25px;
 }
