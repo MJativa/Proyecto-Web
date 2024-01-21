@@ -1,36 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CoDental - Tu Sonrisa, Nuestra Prioridad</title>
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-    <body>
-        <script src="scripts.js"></script>
-        <div class="barra"></div>
-        <nav class="menu">
-            <div class="logo">
-                <a href="index.html"><img src="CoDental.png" alt="Logo de Consultorio"></a>
+
+<head>
+    <title>CoDental - Tu Sonrisa, Nuestra Prioridad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <script src="scripts.js"></script>
+    <div class="barra"></div>
+    <nav class="menu">
+        <div class="logo">
+            <a href="index.html"><img src="CoDental.png" alt="Logo de Consultorio"></a>
+        </div>
+        <ul>
+            <li><a href="quiensomos.html" class="elementoscitas">Quienes Somos</a></li>
+            <li><a href="noticias.html" class="elementoscitas">Noticias</a></li>
+            <li><a href="citas.html" class="elementoscitas">Citas</a></li>
+            <li><a href="contacto.html" class="elementoscitas">Contacto</a></li>
+            <li><a href="portal.html" class="elementoscitas">Portal</a></li>
+            </li>
+        </ul>
+    </nav>
+    <div class="seccion-indicaciones">
+        <h2>Indicaciones</h2>
+        <p><b>Para el relleno de Nombre:</b><br>
+        <ul>
+            <li>Ingrese su nombre completo en el campo proporcionado.</li><br>
+            <li>Utilice letras y espacios únicamente, sin caracteres especiales ni números.</li><br>
+            <li>Este campo es obligatorio; asegúrese de completarlo antes de enviar el formulario.</li><br>
+        </ul>
+        <b>Teléfono:</b>
+        <ul>
+            <li>Ingrese su número de teléfono de 10 dígitos sin espacios ni guiones.</li><br>
+            <li>Por ejemplo, si su número es 123-456-7890, ingréselo como 1234567890.</li><br>
+            <li>Este campo es obligatorio; asegúrese de proporcionar un número válido.</li><br>
+        </ul>
+        <b>Correo Electrónico:</b>
+        <ul>
+            <li>Ingrese su dirección de correo electrónico en el formato adecuado (ejemplo@dominio.com).</li><br>
+            <li>Asegúrese de proporcionar una dirección de correo válida para recibir confirmaciones.</li><br>
+            <li>Este campo es obligatorio; asegúrese de completarlo correctamente.</li><br>
+        </ul>
+        <b>Fecha de la Cita:</b><br>
+        <ul>
+            <li>Seleccione la fecha deseada para su cita en el calendario desplegable.</li><br>
+            <li>Utilice el formato DD/MM/AAAA (día/mes/año) para seleccionar la fecha.</li><br>
+            <li>Este campo es obligatorio; asegúrese de seleccionar una fecha antes de enviar.</li><br>
+        </ul>
+        <b>Descripción:</b><br>
+        <ul>
+            <li>Proporcione una breve descripción de la razón de su cita.</li><br>
+            <li>Utilice este campo para detallar cualquier información relevante para el odontólogo.</li><br>
+            <li>Este campo es obligatorio; asegúrese de proporcionar información útil.</li><br>
+        </ul>
+        <b>Enviar Cita:</b><br>
+        <ul>
+            <li>Después de completar todos los campos, haga clic en el botón "Enviar Cita" para procesar su solicitud.
+            </li><br>
+            <li>Revise cuidadosamente la información antes de enviar para asegurarse de que sea precisa.</li><br>
+            <li>Una vez enviado, recibirá una confirmación por correo electrónico.</li><br>
+        </ul>
+        </p>
+    </div>
+    <div class="seccion-formulario">
+        <h2>Contacto</h2>
+        <form>
+            <div class="columnas">
+                <div class="columna">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="columna">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="columna">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
             </div>
-            <ul>
-                <li><a href="quiensomos.html" class="elementoscitas">Quienes Somos</a></li>
-                <li><a href="noticias.html" class="elementoscitas">Noticias</a></li>
-                <li><a href="citas.html" class="elementoscitas">Citas</a></li>
-                <li><a href="contacto.html" class="elementoscitas">Contacto</a></li>
-                <li><a href="portal.html" class="elementoscitas">Portal</a></li>
-                </li>
-            </ul>
-        </nav>
-        <footer class="piepagina">
-            <img src="CoDentalPie.png" alt="Pie de Página">
-            <div>
-                <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png" alt="facebook"></a>
-                <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png" alt="instagram"></a>
-                <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
-                    <br>
-                    Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
-                    <br>
-                </p>
+
+            <div class="columnas">
+                <div class="columna">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="columna">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
             </div>
-        </footer>
-    </body>
+            <button id="envio" type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer class="piepagina">
+        <img src="CoDentalPie.png" alt="Pie de Página">
+        <div>
+            <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png"
+                    alt="facebook"></a>
+            <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png"
+                    alt="instagram"></a>
+            <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
+                <br>
+                Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
+                <br>
+            </p>
+        </div>
+    </footer>
+</body>
+
 </html>
