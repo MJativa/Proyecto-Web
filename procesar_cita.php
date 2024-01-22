@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nombre','$telefono','$correo','$fecha','$descripcion','$iddoctor')";
 
     if ($conn->query($sql) == TRUE) {
+        // Imprime el ID de la última fila insertada
+        echo "Cita programada con éxito. ID de la cita: " . $conn->insert_id;
         // Cierra la conexión
         $conn->close();
     } else {
