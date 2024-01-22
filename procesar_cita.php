@@ -20,6 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Conexión Fallida: " . $conn->connect_error);
     }
 
+    // Verificar si el script llega hasta aquí
+    die("Script llegó hasta aquí");
+
     $sql = "INSERT INTO citas(nombre, telefono, correo, fecha, descripcion, iddoctor)
             VALUES ('$nombre','$telefono','$correo','$fecha','$descripcion','$iddoctor')";
 
