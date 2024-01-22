@@ -359,9 +359,6 @@ body .paginicio img{
     width: 200px;
 }
 
-
-
-
 /*PAGINA NOTICIAS.HTML*/
 
 .menu a.elementosnoticias:hover{
@@ -442,7 +439,7 @@ body .paginicio img{
     color: #01295C;
 }
 
-.columna input, .columna textarea{
+.columna input, .columna textarea, .columna select{
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;

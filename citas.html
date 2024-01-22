@@ -65,7 +65,7 @@
     </div>
     <div class="seccion-formulario">
         <h2>Contacto</h2>
-        <form>
+        <form action="procesar_cita.php" method="post">
             <div class="columnas">
                 <div class="columna">
                     <label for="nombre">Nombre:</label>
@@ -89,6 +89,14 @@
                 <div class="columna">
                     <label for="descripcion">Descripción:</label>
                     <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
+            </div>
+            <div class="columnas">
+                <div class="columna">
+                    <select name="iddoctor">
+                        <option>Doctor Murphy</option>
+                        <option>Doctor Pearce</option>
+                    </select><br>
                 </div>
             </div>
             <button class="envio" type="submit">Enviar</button>
