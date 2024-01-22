@@ -15,38 +15,47 @@ if(isset($_SESSION["usuario"])){
         die("Conexión Fallida: " . $conn->connect_error);
     }
 
-    $sql = "SELECT citas.*, doctores.nombre as nombre_doctor
-        FROM citas
-        INNER JOIN doctores ON citas.iddoctor = doctores.id
-        WHERE citas.iddoctor = '$doctor'";
-    $result = $conn->query($sql);
+    // Obtener el ID del doctor basado en el nombre del doctor
+    $sqlDoctor = "SELECT id FROM doctores WHERE nombre = '$doctor'";
+    $resultDoctor = $conn->query($sqlDoctor);
 
-    echo "<h2>Bienvenido, $doctor</h2>";
+    if ($resultDoctor->num_rows > 0) {
+        $rowDoctor = $resultDoctor->fetch_assoc();
+        $idDoctor = $rowDoctor["id"];
 
-    if($result->num_rows > 0){
-        echo "<table border='1'>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Teléfono</th>
-                    <th>Correo</th>
-                    <th>Fecha</th>
-                    <th>Descripción</th>
-                    <th>ID Doctor</th>
-                </tr>";
+        // Consulta para obtener las citas asignadas al doctor
+        $sqlCitas = "SELECT * FROM citas WHERE iddoctor = '$idDoctor'";
+        $resultCitas = $conn->query($sqlCitas);
 
-        while($row = $result->fetch_assoc()){
-            echo "<tr>
-                    <td>".$row["nombre"]."</td>
-                    <td>".$row["telefono"]."</td>
-                    <td>".$row["correo"]."</td>
-                    <td>".$row["fecha"]."</td>
-                    <td>".$row["descripcion"]."</td>
-                    <td>".$row["iddoctor"]."</td>
-                </tr>";
+        echo "<h2>Bienvenido, $doctor</h2>";
+
+        if($resultCitas->num_rows > 0){
+            echo "<table border='1'>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>ID Doctor</th>
+                    </tr>";
+
+            while($row = $resultCitas->fetch_assoc()){
+                echo "<tr>
+                        <td>".$row["nombre"]."</td>
+                        <td>".$row["telefono"]."</td>
+                        <td>".$row["correo"]."</td>
+                        <td>".$row["fecha"]."</td>
+                        <td>".$row["descripcion"]."</td>
+                        <td>".$row["iddoctor"]."</td>
+                    </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "<p>No hay citas asignadas.</p>";
         }
-        echo "</table>";
     } else {
-        echo "<p>No hay citas asignadas.</p>";
+        echo "Error al obtener el ID del doctor.";
     }
 
     $conn->close();
