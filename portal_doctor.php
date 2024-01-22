@@ -27,18 +27,43 @@ if (isset($_SESSION["usuario"])) {
         $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor";
         $resultCitas = $conn->query($sqlCitas);
 
+        echo "<!DOCTYPE html>
+                <html lang='es'>
+                <head>
+                    <meta charset='UTF-8'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                    <title>Citas - CoDental - Tu Sonrisa, Nuestra Prioridad</title>
+                    <link rel='stylesheet' href='estilos.css'>
+                </head>
+                <body>
+                    <script src='scripts.js'></script>
+                    <div class='barra'></div>
+                    <nav class='menu'>
+                        <div class='logo'>
+                            <a href='index.html'><img src='CoDental.png' alt='Logo de Consultorio'></a>
+                        </div>
+                        <ul>
+                            <li><a href='quiensomos.html' class='elementoscitas'>Quienes Somos</a></li>
+                            <li><a href='noticias.html' class='elementoscitas'>Noticias</a></li>
+                            <li><a href='citas.html' class='elementoscitas'>Citas</a></li>
+                            <li><a href='contacto.html' class='elementoscitas'>Contacto</a></li>
+                            <li><a href='portal.html' class='elementoscitas'>Portal</a></li>
+                        </ul>
+                    </nav>";
+
         echo "<h2>Bienvenido, $doctor</h2>";
 
         if ($resultCitas->num_rows > 0) {
-            echo "<table border='1'>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Teléfono</th>
-                        <th>Correo</th>
-                        <th>Fecha</th>
-                        <th>Descripción</th>
-                        <th>ID Doctor</th>
-                    </tr>";
+            echo "<div class='tabla-citas'>
+                    <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Correo</th>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>ID Doctor</th>
+                        </tr>";
 
             while ($row = $resultCitas->fetch_assoc()) {
                 echo "<tr>
@@ -50,7 +75,7 @@ if (isset($_SESSION["usuario"])) {
                         <td>" . $row["iddoctor"] . "</td>
                     </tr>";
             }
-            echo "</table>";
+            echo "</table></div>";
         } else {
             echo "<p>No hay citas asignadas.</p>";
         }
@@ -58,7 +83,17 @@ if (isset($_SESSION["usuario"])) {
         echo "<p>No se pudo obtener el ID del doctor.</p>";
     }
 
-    $conn->close();
+    echo "<footer class='piepagina'>
+                <img src='CoDentalPie.png' alt='Pie de Página'>
+                <div>
+                    <a class='redes' href='https://www.facebook.com/' target='_blank'><img src='facebooklogo.png' alt='facebook'></a>
+                    <a class='redes' href='https://www.instagram.com/' target='_blank'><img src='instagramlogo.png' alt='instagram'></a>
+                    <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
+                        <br>
+                        Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
+                        <br>
+                    </p>
+                </div>";
 } else {
     header("Location: portal.html");
     exit;
