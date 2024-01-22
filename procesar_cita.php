@@ -21,12 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verificar si el script llega hasta aquí
-    die("Script llegó hasta aquí");
+    echo "Script llegó hasta aquí";
 
     $sql = "INSERT INTO citas(nombre, telefono, correo, fecha, descripcion, iddoctor)
             VALUES ('$nombre','$telefono','$correo','$fecha','$descripcion','$iddoctor')";
 
-    if ($conn->query($sql) == TRUE) {
+    // Verificar la consulta SQL
+    echo "Consulta SQL: $sql";
+
+    if ($conn->query($sql) === TRUE) {
         // Imprime el ID de la última fila insertada
         echo "Cita programada con éxito. ID de la cita: " . $conn->insert_id;
         // Cierra la conexión
@@ -38,18 +41,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Acceso no autorizado.";
 }
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirección</title>
-    <script>
-        // Redirección a confirmacion.html
-        window.location.href = "confirmacion.html";
-    </script>
-</head>
-<body>
-    <!-- No es necesario contenido en el cuerpo -->
-</body>
-</html>
