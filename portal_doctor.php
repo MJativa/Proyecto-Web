@@ -47,6 +47,10 @@ if(isset($_SESSION["usuario"])){
 
     echo "<h2>Bienvenido, $doctor</h2>";
 
+    if($result === FALSE) {
+        die("Error en la consulta: " . $conn->error);
+    }
+
     if($result->num_rows > 0){
         echo "<table>
                 <tr>
