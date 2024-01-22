@@ -25,11 +25,7 @@ if (isset($_SESSION["usuario"])) {
 
         // Consulta para obtener las citas asignadas al doctor
         $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor";
-        echo "Consulta SQL para Citas: " . $sqlCitas; // Verificar la consulta SQL
         $resultCitas = $conn->query($sqlCitas);
-
-        // Verificar el número de filas devueltas
-        echo "Número de Filas de Citas: " . $resultCitas->num_rows;
 
         echo "<h2>Bienvenido, $doctor</h2>";
 
