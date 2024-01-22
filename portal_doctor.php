@@ -48,6 +48,7 @@ if (isset($_SESSION["usuario"])) {
                             <li><a href='citas.html' class='elementoscitas'>Citas</a></li>
                             <li><a href='contacto.html' class='elementoscitas'>Contacto</a></li>
                             <li><a href='portal.html' class='elementoscitas'>Portal</a></li>
+                            <li><a href='cerrar_sesion.php' class='elementoscitas'>Cerrar Sesión</a></li>
                         </ul>
                     </nav>";
 
@@ -63,6 +64,7 @@ if (isset($_SESSION["usuario"])) {
                             <th>Fecha</th>
                             <th>Descripción</th>
                             <th>ID Doctor</th>
+                            <th>Acciones</th>
                         </tr>";
 
             while ($row = $resultCitas->fetch_assoc()) {
@@ -73,6 +75,10 @@ if (isset($_SESSION["usuario"])) {
                         <td>" . $row["fecha"] . "</td>
                         <td>" . $row["descripcion"] . "</td>
                         <td>" . $row["iddoctor"] . "</td>
+                        <td>
+                            <button class='envio' onclick='eliminarCita(" . $row["id"] . ")'>Eliminar</button>
+                            <button class='envio' onclick='modificarCita(" . $row["id"] . ")'>Modificar</button>
+                        </td>
                     </tr>";
             }
             echo "</table></div>";
@@ -82,7 +88,9 @@ if (isset($_SESSION["usuario"])) {
     } else {
         echo "<p>No se pudo obtener el ID del doctor.</p>";
     }
-
+    echo '<form action="cerrar_sesion.php" method="post">
+            <button class="envio" type="submit">Cerrar Sesión</button>
+            </form>';
     echo "<footer class='piepagina'>
                 <img src='CoDentalPie.png' alt='Pie de Página'>
                 <div>
@@ -94,6 +102,7 @@ if (isset($_SESSION["usuario"])) {
                         <br>
                     </p>
                 </div>";
+
 } else {
     header("Location: portal.html");
     exit;
