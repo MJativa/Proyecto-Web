@@ -374,6 +374,7 @@ body .paginicio img{
     padding: 10%;
     text-align: center;
     
+    
 }
 
 .titulo {
@@ -383,6 +384,8 @@ body .paginicio img{
     padding: 15px; 
     background-color: #FBEEE6;
     border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .titulo img {
     max-width: 200px; 
@@ -390,8 +393,45 @@ body .paginicio img{
     height: auto; 
     margin-bottom: 10px; 
 }
+/*PAGINA NOTICIAS1.HTML*/
+.menu a.elementosnoticias1:hover{
+    background-color: #EF7257;
+    border-radius: 25px;
+}
+.titulos1 {
+    
+    
+    padding: 20px;
+    margin: 5%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
 
-
+}
+.titulo1 {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    background-color: #FBEEE6;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    text-align: justify;
+}
+.imagennoticia1{
+    max-width: 40%;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    
+}
 /* Estilos adicionales para hacerlo responsive */
 @media (max-width: 768px) {
     
