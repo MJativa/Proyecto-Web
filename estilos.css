@@ -370,24 +370,35 @@ body .paginicio img{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 20px ,20xp ,20px ,20px;
+    margin-top: 10px;
     padding: 10%;
     text-align: center;
     
-    
+
+
 }
 
 .titulo {
     width: 35%;
-    text-align: center;
-    margin: 10px;
+    margin-top: 50px;
     padding: 15px; 
     background-color: #FBEEE6;
     border-radius: 25px;
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #01295C;
+    
 }
+.titulo a{
+    text-decoration: none;
+    color: #01295C;
+}
+.titulo p{
+    text-align: justify;
+}
+
 .titulo img {
+    text-align: center;
     max-width: 200px; 
     min-width: 100px;
     height: auto; 
@@ -414,7 +425,7 @@ body .paginicio img{
 
 }
 .titulo1 {
-    max-width: 600px;
+    max-width: 1000px;
     background-color: #fff;
     padding: 20px;
     background-color: #FBEEE6;
@@ -422,15 +433,29 @@ body .paginicio img{
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: block;
+    color: #01295C;
+}
+.titulo1 h1{
+    text-align: center;
+}
+.titulo1 p,li,caption{
     text-align: justify;
 }
+
 .imagennoticia1{
-    max-width: 40%;
+    width: 60%;
+    max-width: 100%;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: block;
     
+}
+.atras{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
 }
 /* Estilos adicionales para hacerlo responsive */
 @media (max-width: 768px) {
