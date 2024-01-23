@@ -26,38 +26,21 @@
             <button id="search-button" onclick="searchProfiles()">Buscar</button><button id="reset-button" onclick="resetFilters()">Todos</button>
         </div>
         <div class="profile-container">
-            <div class="profile" data-name="Nombre 1">
-                <img src="persona1.jpg" alt="Foto de Persona 1">
-                <div class="profile-details">
-                    <h2>Nombre 1</h2>
-                    <p>Teléfono: 123-456-7890</p>
-                    <p>Correo Electrónico: nombre1@example.com</p>
-                    <p>Consultorio: Consultorio 1</p>
-                    <p>Odontología general</p>
-                </div>
-            </div>
+            <?php
+            include 'odontologos-data.php';
 
-            <div class="profile" data-name="Nombre 2">
-                <img src="persona2.jpg" alt="Foto de Persona 2">
-                <div class="profile-details">
-                    <h2>Nombre 2</h2>
-                    <p>Teléfono: 987-654-3210</p>
-                    <p>Correo Electrónico: nombre2@example.com</p>
-                    <p>Consultorio: Consultorio 2</p>
-                    <p>Periodoncia</p>
-                </div>
-            </div>
-
-            <div class="profile" data-name="Nombre 3">
-                <img src="persona3.jpg" alt="Foto de Persona 3">
-                <div class="profile-details">
-                    <h2>Nombre 3</h2>
-                    <p>Teléfono: 555-123-4567</p>
-                    <p>Correo Electrónico: nombre3@example.com</p>
-                    <p>Consultorio: Consultorio 1</p>
-                    <p>Endodoncia</p>
-                </div>
-            </div>
+            foreach ($odontologos as $odontologo) {
+                echo '<div class="profile" data-name="' . $odontologo[0] . '">';
+                echo '<img src="' . $odontologo[5] . '" alt="Foto de ' . $odontologo[0] . '">';
+                echo '<div class="profile-details">';
+                echo '<h2>' . $odontologo[0] . '</h2>';
+                echo '<p>Teléfono: ' . $odontologo[1] . '</p>';
+                echo '<p>Correo Electrónico: ' . $odontologo[2] . '</p>';
+                echo '<p>Consultorio: ' . $odontologo[3] . '</p>';
+                echo '<p>' . $odontologo[4] . '</p>';
+                echo '</div></div>';
+            }
+            ?>
         </div>
         <footer class="piepagina">
             <img src="CoDentalPie.png" alt="Pie de Página">
