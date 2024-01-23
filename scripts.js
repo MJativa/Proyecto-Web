@@ -53,3 +53,31 @@ function modificarCita(idCita) {
     // Aquí redirigiremos a una página de edición (modificar_cita.html) con el ID de la cita
     window.location.href = 'modificar_cita.html?id=' + idCita;
 }
+
+function toggleDescription(id) {
+    var description = document.getElementById(id);
+    description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+    
+}
+
+function searchProfiles() {
+    var input = document.getElementById("search-input").value.toLowerCase(); // Convertir a minúsculas
+    var profiles = document.querySelectorAll('.profile');
+
+    profiles.forEach(profile => {
+        var name = profile.getAttribute('data-name').toLowerCase(); // Convertir a minúsculas
+
+        if (name.indexOf(input) > -1) {
+            profile.style.display = "";
+        } else {
+            profile.style.display = "none";
+        }
+    });
+}
+function resetFilters() {
+    var profiles = document.querySelectorAll('.profile');
+    profiles.forEach(profile => {
+        profile.style.display = ""; // Restablece la visibilidad
+    });
+    document.getElementById("search-input").value = "";
+}

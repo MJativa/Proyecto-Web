@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ubicacion - CoDental - Tu Sonrisa, Nuestra Prioridad</title>
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-    <body>
-        <script src="scripts.js"></script>
-        <div class="barra"></div>
-        <nav class="menu">
-            <div class="logo">
-                <a href="index.html"><img src="CoDental.png" alt="Logo de Consultorio"></a>
+<head>
+    <title>Ubicacion - CoDental - Tu Sonrisa, Nuestra Prioridad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <div class="barra"></div>
+    <nav class="menu">
+        <div class="logo">
+            <a href="index.html"><img src="CoDental.png" alt="Logo de Consultorio"></a>
+        </div>
+        <ul>
+            <li><a href="quiensomos.html" class="elementoscitas">Quienes Somos</a></li>
+            <li><a href="noticias.html" class="elementoscitas">Noticias</a></li>
+            <li><a href="citas.html" class="elementoscitas">Citas</a></li>
+            <li><a href="contacto.html" class="elementoscitas">Contacto</a></li>
+            <li><a href="portal.html" class="elementoscitas">Portal</a></li>
+            <li><a href="Odontologos.html" class="elementosnoticias">Odontologos</a></li>
+        </ul>
+    </nav>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.7409105351903!2d-79.02845472461637!3d-2.8908678970856254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd22aeda55ff7b%3A0x9e5a6677f66ac1ab!2sAvenida%20Ord%C3%B3%C3%B1ez%20Lasso%20%26%20Los%20Pinos%2C%20Cuenca!5e0!3m2!1ses!2sec!4v1705982637994!5m2!1ses!2sec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="list-container">
+        <div class="list" onclick="toggleDescription('description1')">
+            <h3>Consultorios</h3>
+            <div id="description1">
+                <p>En CoDental, nos enorgullece ofrecer una experiencia odontológica excepcional centrada en la atención personalizada y el bienestar de nuestros pacientes...</p>
+                <br>
+                <p>Para proporcionar la mejor atención posible, invertimos en tecnología de última generación. Desde radiografías digitales hasta unidades odontológicas modernas, estamos comprometidos con la excelencia clínica y la comodidad del paciente.</p>
+                <img src="consultorio.jpeg" alt="Imagen 1">
             </div>
-            <ul>
-                <li><a href="quiensomos.html" class="elementoscitas">Quienes Somos</a></li>
-                <li><a href="noticias.html" class="elementoscitas">Noticias</a></li>
-                <li><a href="citas.html" class="elementoscitas">Citas</a></li>
-                <li><a href="contacto.html" class="elementoscitas">Contacto</a></li>
-                <li><a href="portal.html" class="elementoscitas">Portal</a></li>
-                <li><a href="Odontologos.html" class="elementosnoticias">Odontologos</a></li>
-                </li>
-            </ul>
-        </nav>
-        <footer class="piepagina">
-            <img src="CoDentalPie.png" alt="Pie de Página">
-            <div>
-                <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png" alt="facebook"></a>
-                <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png" alt="instagram"></a>
-                <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
-                    <br>
-                    Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
-                    <br>
-                </p>
+        </div>
+
+        <div class="list" onclick="toggleDescription('description2')">
+            <h3>Instalaciones</h3>
+            <div id="description2">
+                <ul>
+                    <li>Recepción</li>
+                    <li>Oficina</li>
+                    <li>Consultorio 1</li>
+                    <li>Recepción 2</li>
+                </ul>
+                <img src="consultorio2.jpg" alt="Imagen 2">
             </div>
-        </footer>
-    </body>
+        </div>
+
+        <div class="list" onclick="toggleDescription('description3')">
+            <h3>Indicaciones</h3>
+            <div id="description3">
+                <ul>
+                    <li>Pasando ...</li>
+                    <li>Alfrente de ..</li>
+                    <li>Alado de ...</li>
+                    <li>En el quito piso del edificio...</li>
+                </ul>
+                <img src=".webp" alt="Imagen 3">
+            </div>
+        </div>
+    </div>
+
+    <footer class="piepagina">
+        <img src="CoDentalPie.png" alt="Pie de Página">
+        <div>
+            <a class="redes" href="https://www.facebook.com/" target="_blank"><img src="facebooklogo.png" alt="facebook"></a>
+            <a class="redes" href="https://www.instagram.com/" target="_blank"><img src="instagramlogo.png" alt="instagram"></a>
+            <p>Copyright © 2024 CoDental. Federación Odontológica Ecuatoriana. Todos los Derechos Reservados
+                <br>
+                Av. Ordoñez Lasso y Calle Los Pinos, Cuenca- Ecuador
+                <br>
+            </p>
+        </div>
+    </footer>
+
+    
+</body>
 </html>
