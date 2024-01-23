@@ -400,15 +400,20 @@ body .paginicio img{
     height: auto;
     display: block;
     margin: auto;
+    filter: invert(0.07);
 }
 .texto-superpuesto {
     position: absolute;
     top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 35%;
     transform: translate(-50%, -110%);
-    color: rgb(10, 10, 10);
+    color: white;
     font-size: 4vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:sans-serif;    
+}
+.texto-superpuesto p, pre{
+    font-weight: 800;
+    color: white;
 }
 /*PAGINA NOTICIAS1.HTML*/
 .menu a.elementosnoticias1:hover{
@@ -462,6 +467,72 @@ body .paginicio img{
     padding: 20px;
     margin-top: 20px;
     display: flex;
+}
+/*PAGINA contacto.HTML*/
+.containerco {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    flex: 1;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-side {
+    flex: 1;
+    padding-left: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.line {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+form {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 /* ubicacion*/
 .map-container {
