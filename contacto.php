@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Conexión Fallida: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO formulario_contacto (nombre, correo, telefono, tipo_contacto, mensaje)
+    $sql = "INSERT INTO contacto (nombre, correo, telefono, tipo_contacto, mensaje)
             VALUES ('$nombre','$correo','$telefono','$tipo_contacto','$mensaje')";
 
    
