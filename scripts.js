@@ -220,3 +220,7 @@ function validarFormularioContacto() {
     // Llamar a las funciones de validación
     return validarNombre() && validarCorreo() && validarTelefono() && validarMensaje();
 }
+
+function regresarNoticias(){
+    window.location.href = "noticias.html";
+}
