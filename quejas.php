@@ -29,6 +29,11 @@
         <div class="containerque">
             <div class="left-side">
                 <h1>Quejas y Comentarios</h1>
+                <p>Bienvenido al apartado exclusivo para quejas y comentarios. Tu opinión es invaluable y 
+                    nos ayuda a mejorar constantemente. Este espacio está diseñado para que compartas tus 
+                    experiencias, sugerencias y cualquier comentario que desees expresar. Estamos comprometidos 
+                    a escucharte y utilizar tus comentarios para ofrecer un servicio de calidad superior. 
+                    ¡Gracias por contribuir a nuestro continuo crecimiento y mejora!</p>
             </div>
             <div class="right-side">
                 <?php
@@ -52,10 +57,11 @@
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "<div class='dato'>";
-                        echo "<p><strong>Nombre:</strong> " . $row["nombre"]. " " . $row["tipo_contacto"]. "</p>";
+                        echo "<p><strong>Nombre:</strong> " . $row["nombre"]. "</p>";
+                        echo "<p><strong>Tipo de Comentario:</strong> " . $row["tipo_contacto"]. "</p>";
                         echo "<p><strong>Mensaje:</strong> " . $row["mensaje"]. "</p>";
                         echo "</div>";
-			echo "<br>";
+			            echo "<br>";
 
                     }
                 } else {

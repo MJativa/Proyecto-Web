@@ -654,6 +654,7 @@ button:hover {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
 }
 
 .izq {
@@ -681,6 +682,17 @@ button:hover {
     color: #FBEEE6;
     font-size: 4vw;   
     transform: translate(-50%, -105%);
+}
+.dato{
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 20px;
+    background-color: #FBEEE6;
+    border-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    color: #01295C;
 }
 /*PAGINA odontologos.HTML*/
 
