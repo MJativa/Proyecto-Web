@@ -165,12 +165,58 @@ function validarDescripcion() {
 }
 
 // Función principal para validar todo el formulario antes de enviar
-function validarFormulario() {
+function validarFormularioContacto() {
     if (validarNombre() && validarTelefono() && validarCorreo() && validarFecha() && validarDescripcion()) {
-        // Si todas las validaciones son exitosas, se envía el formulario
+        return true;
+    }
+        return false;
+}
+
+function validarFormularioContacto() {
+    function validarNombre() {
+        var nombre = document.getElementById("nombre").value;
+        if (nombre.trim() === "") {
+            alert("Por favor, ingrese su nombre.");
+            return false;
+        }
         return true;
     }
 
-    // Si alguna validación falla, se detiene el envío del formulario
-    return false;
+    function validarCorreo() {
+        var correo = document.getElementById("correo").value;
+        var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (correo.trim() === "") {
+            alert("Por favor, ingrese su correo electrónico.");
+            return false;
+        }
+        if (!regexCorreo.test(correo)) {
+            alert("Por favor, ingrese un correo electrónico válido.");
+            return false;
+        }
+        return true;
+    }
+
+    function validarTelefono() {
+        var telefono = document.getElementById("telefono").value;
+        if (telefono.trim() !== "") {
+            var regexTelefono = /^\d{10}$/;
+            if (!regexTelefono.test(telefono)) {
+                alert("Por favor, ingrese un número de teléfono válido de 10 dígitos.");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function validarMensaje() {
+        var mensaje = document.getElementById("mensaje").value;
+        if (mensaje.trim() === "") {
+            alert("Por favor, ingrese su mensaje.");
+            return false;
+        }
+        return true;
+    }
+
+    // Llamar a las funciones de validación
+    return validarNombre() && validarCorreo() && validarTelefono() && validarMensaje();
 }
