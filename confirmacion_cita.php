@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<nav class="menu">
+<div class="barra"></div>
+    <nav class="menu">
         <div class="logo">
             <a href="index.html"><img src="CoDental.png" alt="Logo de Consultorio"></a>
         </div>
@@ -17,7 +18,6 @@
             <li><a href="citas.html" class="elementoscitas">Citas</a></li>
             <li><a href="contacto.html" class="elementoscitas">Contacto</a></li>
             <li><a href="portal.html" class="elementoscitas">Portal</a></li>
-            <li><a href="Odontologos.html" class="elementosnoticias">Odontologos</a></li>
             </li>
         </ul>
     </nav>

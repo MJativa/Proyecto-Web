@@ -418,9 +418,8 @@ body .paginicio img{
     top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 35%;
     transform: translate(-50%, -110%);
-    color: white;
-    font-size: 4vw;
-    font-family:sans-serif;    
+    color: #FBEEE6;
+    font-size: 4vw;   
 }
 .texto-superpuesto p, pre{
     font-weight: 800;
