@@ -54,7 +54,7 @@ if (isset($_SESSION["usuario"])) {
                                             WHERE id = $idCita";
 
                     if ($conn->query($sqlActualizarCita) === TRUE) {
-                        echo "<p>Cita modificada exitosamente.</p>";
+                        eecho "<script>alert('Cita modificada exitosamente.'); window.location.href = 'portal_doctor.php';</script>";
                     } else {
                         echo "Error al modificar la cita: " . $conn->error;
                     }
@@ -71,9 +71,19 @@ if (isset($_SESSION["usuario"])) {
                             <body>
                                 <script src='scripts.js'></script>
                                 <div class='barra'></div>
-                                <nav class='menu'>
-                                    <!-- ... (Resto del código del menú) -->
-                                </nav>";
+                                <div class='barra'></div>
+                <nav class='menu'>
+                    <div class='logo'>
+                        <a href='index.html'><img src='CoDental.png' alt='Logo de Consultorio'></a>
+                    </div>
+                    <ul>
+                        <li><a href='quiensomos.html' class='elementoscitas'>Quienes Somos</a></li>
+                        <li><a href='noticias.html' class='elementoscitas'>Noticias</a></li>
+                        <li><a href='citas.html' class='elementoscitas'>Citas</a></li>
+                        <li><a href='contacto.html' class='elementoscitas'>Contacto</a></li>
+                        <li><a href='portal.html' class='elementoscitas'>Portal</a></li>
+                    </ul>
+                </nav>";
 
                     echo "<h2>Modificar Cita</h2>";
                     echo "<form action='modificar_cita.php?id=$idCita' method='post'>
