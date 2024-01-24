@@ -189,7 +189,7 @@ body .paginicio img{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: medium;
+    font-size: large;
     width: auto;
     height: auto;
 }
@@ -775,6 +775,11 @@ th {
 
 
 /*PAGINA CONFIRMACION_CITA.PHP*/
+.mensaje-confirmacion{
+    font-size: 18px;
+    color: #01295C;
+    margin-top: 20px;
+}
 
 .boton-regresar {
     background-color: #01295C;
