@@ -37,9 +37,7 @@
             </div>
             <div class="right-side">
                 <?php
-                // Aquí se debería hacer la conexión a la base de datos y obtener los datos
-                // Reemplaza las siguientes líneas con la lógica adecuada para tu caso
-
+                
                 $servername = "localhost";
                 $username = "root";
                 $password = "root";
