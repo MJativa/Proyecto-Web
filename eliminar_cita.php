@@ -24,32 +24,21 @@ if (isset($_SESSION["usuario"])) {
         $idDoctor = $rowDoctor["id"];
 
         // Verificar si se proporcionó un ID de cita válido
-        // Verificar si se proporcionó un ID de cita válido
-if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
-    $idCita = $_GET["id"];
+        if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
+            $idCita = $_GET["id"];
 
-    // Verificar si el doctor tiene permisos para eliminar esta cita
-    $sqlVerificarCita = "SELECT * FROM citas WHERE id = $idCita AND iddoctor = $idDoctor";
-    $resultVerificarCita = $conn->query($sqlVerificarCita);
+            // Consulta para eliminar la cita
+            $sqlEliminarCita = "DELETE FROM citas WHERE id = $idCita AND iddoctor = $idDoctor";
 
-    if ($resultVerificarCita->num_rows > 0) {
-        // El doctor tiene permisos para eliminar esta cita
-
-        // Consulta para eliminar la cita
-        $sqlEliminarCita = "DELETE FROM citas WHERE id = $idCita";
-
-        if ($conn->query($sqlEliminarCita) === TRUE) {
-            echo "<script>alert('Registro eliminado con éxito.'); window.location.href = 'portal_doctor.php';</script>";
+            if ($conn->query($sqlEliminarCita) === TRUE) {
+                // Registro eliminado con éxito, muestra una alerta en JavaScript
+                echo "<script>alert('Registro eliminado con éxito.'); window.location.href = 'portal_doctor.php';</script>";
+            } else {
+                echo "Error al eliminar la cita: " . $conn->error;
+            }
         } else {
-            echo "Error al eliminar la cita: " . $conn->error;
+            echo "<p>ID de cita no válido.</p>";
         }
-    } else {
-        echo "<p>No tienes permisos para eliminar esta cita.</p>";
-    }
-} else {
-    echo "<p>ID de cita no válido.</p>";
-}
-
     } else {
         echo "<p>No se pudo obtener el ID del doctor.</p>";
     }

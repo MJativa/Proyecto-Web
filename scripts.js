@@ -32,7 +32,7 @@ function eliminarCita(idCita) {
     if (confirm("¿Estás seguro de que deseas eliminar esta cita?")) {
         // Envía una solicitud al servidor para eliminar la cita con el ID proporcionado
         fetch('eliminar_cita.php?id=' + idCita, {
-            method: 'DELETE',
+            method: 'GET',  // Cambiar a GET
         })
         .then(response => {
             if (!response.ok) {
