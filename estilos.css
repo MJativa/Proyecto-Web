@@ -434,11 +434,12 @@ body .paginicio img{
     position: absolute;
     top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 35%;
+    transform: translate(-50%, -110%);
+    color: #FBEEE6;
+    font-size: 4vw;   
     transform: translate(-50%, -105%);
-    color: white;
-    
-    font-family:sans-serif;    
 }
+
 .texto-superpuesto  pre{
     font-weight: 700;
     color: #01295C;
