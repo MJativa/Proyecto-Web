@@ -183,6 +183,17 @@ body .paginicio img{
     font-size: 35px;
 }
 
+#textocita{
+    color:#FBEEE6;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: large;
+    width: auto;
+    height: auto;
+}
+
 #botoncitas{
     background-color: #0AB0D9;
     color: #FBEEE6;
@@ -785,3 +796,33 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+.mensaje-error {
+    background-color: #ff8c8c; /* Color de fondo rojo */
+    color: #FBEEE6; /* Color de texto oscuro */
+    padding: 15px;
+    border: 1px solid #f5c6cb; /* Borde rojo más oscuro */
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/*PAGINA CONFIRMACION_CITA.PHP*/
+.mensaje-confirmacion{
+    font-size: 18px;
+    color: #01295C;
+    margin-top: 20px;
+}
+
+.boton-regresar {
+    background-color: #01295C;
+    color: #FBEEE6;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+  }
