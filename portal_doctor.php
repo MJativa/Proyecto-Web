@@ -16,6 +16,7 @@ if (isset($_SESSION["usuario"])) {
     }
 
     // Obtener el ID del doctor
+    // Obtener el ID del doctor
     $sqlDoctor = "SELECT id FROM doctores WHERE usuario = '$doctor'";
     $resultDoctor = $conn->query($sqlDoctor);
 
@@ -24,7 +25,7 @@ if (isset($_SESSION["usuario"])) {
         $idDoctor = $rowDoctor["id"];
 
         // Consulta para obtener las citas asignadas al doctor
-        $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor";
+        $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor ORDER BY fecha ASC";
         $resultCitas = $conn->query($sqlCitas);
 
         echo "<!DOCTYPE html>
@@ -38,9 +39,18 @@ if (isset($_SESSION["usuario"])) {
                 <body>
                     <script src='scripts.js'></script>
                     <div class='barra'></div>
-                    <nav class='menu'>
-                        <!-- ... (Resto del código del menú) -->
-                    </nav>";
+                <nav class='menu'>
+                    <div class='logo'>
+                        <a href='index.html'><img src='CoDental.png' alt='Logo de Consultorio'></a>
+                    </div>
+                    <ul>
+                        <li><a href='quiensomos.html' class='elementoscitas'>Quienes Somos</a></li>
+                        <li><a href='noticias.html' class='elementoscitas'>Noticias</a></li>
+                        <li><a href='citas.html' class='elementoscitas'>Citas</a></li>
+                        <li><a href='contacto.html' class='elementoscitas'>Contacto</a></li>
+                        <li><a href='portal.html' class='elementoscitas'>Portal</a></li>
+                    </ul>
+                </nav>";
 
         echo "<h2>Bienvenido, $doctor</h2>";
 

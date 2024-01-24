@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conn->query($sql) === TRUE) {
         // Redirige al usuario a la página de confirmación
-        header("Location: confirmacion_cita.php");
+        header("Location: confirmacion_cita.html");
         exit();
     } else {
         echo "Error al programar la cita: " . $conn->error;
