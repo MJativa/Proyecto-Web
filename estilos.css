@@ -443,11 +443,14 @@ body .paginicio img{
     font-weight: 700;
     color: #01295C;
     font-size: 4vw;
+    font-family: A;
+    font-family: 'ArnhemProBlond', sans-serif;
 }
 .texto-superpuesto p{
     font-size: 4vw;
     font-weight: 850;
     color: #01295C;
+    font-family: 'ArnhemProBlond', sans-serif;
 }
 /*PAGINA NOTICIAS1.HTML*/
 .menu a.elementosnoticias1:hover{
