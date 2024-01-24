@@ -51,7 +51,7 @@ function eliminarCita(idCita) {
 function modificarCita(idCita) {
     // Puedes redirigir a una página de edición o mostrar un formulario en la misma página
     // Aquí redirigiremos a una página de edición (modificar_cita.html) con el ID de la cita
-    window.location.href = 'modificar_cita.html?id=' + idCita;
+    window.location.href = 'modificar_cita.php?id=' + idCita;
 }
 
 function toggleDescription(id) {
