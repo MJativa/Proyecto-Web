@@ -643,6 +643,45 @@ button:hover {
     
 }
 
+/*PAGINA quejas*/
+
+
+.containerque {
+    display: flex;
+    justify-content: space-between;
+    width: 90%; /* Ajusta el valor según tus necesidades */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.izq {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.der {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.imagenquejas{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    filter: invert(0.07);
+}
+.texto-superpuesto {
+    position: absolute;
+    top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
+    left: 35%;
+    transform: translate(-50%, -110%);
+    color: #FBEEE6;
+    font-size: 4vw;   
+    transform: translate(-50%, -105%);
+}
 /*PAGINA odontologos.HTML*/
 
 #search-input {
