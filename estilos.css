@@ -511,6 +511,13 @@ body .paginicio img{
     width: 80px;
     height: 40px;
 }
+
+.botonesnoticias{
+    background-color: #01295C;
+    color: #FBEEE6;
+    width: 70px;
+    height: 40px;
+}
 /*PAGINA contacto.HTML*/
 .containerco {
     display: flex;
