@@ -25,11 +25,14 @@
   <p>Gracias por programar una cita odontológica con nosotros. Su cita ha sido registrada correctamente.</p>
   <p>Detalles de la cita:</p>
   <ul>
-    <li><strong>Nombre:</strong> <?php echo htmlspecialchars($_POST["nombre"]); ?></li>
-    <li><strong>Fecha:</strong> <?php echo htmlspecialchars($_POST["fecha"]); ?></li>
-    <li><strong>Descripción:</strong> <?php echo htmlspecialchars($_POST["descripcion"]); ?></li>
-  </ul>
-  <p>Recibirás una confirmación por correo electrónico en la dirección <strong><?php echo htmlspecialchars($_POST["correo"]); ?></strong>.</p><br>
+    <p>Detalles de la cita:</p>
+    <ul>
+        <li><strong>Nombre:</strong> <?php echo isset($_POST["nombre"]) ? htmlspecialchars($_POST["nombre"]) : "No disponible"; ?></li>
+        <li><strong>Fecha:</strong> <?php echo isset($_POST["fecha"]) ? htmlspecialchars($_POST["fecha"]) : "No disponible"; ?></li>
+        <li><strong>Descripción:</strong> <?php echo isset($_POST["descripcion"]) ? htmlspecialchars($_POST["descripcion"]) : "No disponible"; ?></li>
+    </ul>
+    <p>Recibirás una confirmación por correo electrónico en la dirección <strong><?php echo isset($_POST["correo"]) ? htmlspecialchars($_POST["correo"]) : "No disponible"; ?></strong>.</p><br>
+
   <a href="index.html" class="boton-regresar">Regresar</a><br>
   <footer class="piepagina">
         <img src="CoDentalPie.png" alt="Pie de Página">
