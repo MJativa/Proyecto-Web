@@ -50,7 +50,6 @@ function eliminarCita(idCita) {
 
 function modificarCita(idCita) {
     if (confirm("¿Estás seguro de que deseas modificar esta cita?")) {
-        alert('Campo modificado exitosamente');
         window.location.href = 'modificar_cita.php?id=' + idCita;
     }
 }

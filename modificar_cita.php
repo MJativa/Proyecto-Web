@@ -54,7 +54,7 @@ if (isset($_SESSION["usuario"])) {
                                             WHERE id = $idCita";
 
                     if ($conn->query($sqlActualizarCita) === TRUE) {
-                        eecho "<script>alert('Cita modificada exitosamente.'); window.location.href = 'portal_doctor.php';</script>";
+                        echo "<script>alert('Cita modificada exitosamente.'); window.location.href = 'portal_doctor.php';</script>";
                     } else {
                         echo "Error al modificar la cita: " . $conn->error;
                     }
