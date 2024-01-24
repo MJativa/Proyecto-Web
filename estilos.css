@@ -176,7 +176,7 @@ body .paginicio img{
     font-size: small;
 }
 
-.seccioncita h1{
+.seccioncita h1, .seccioncita h2{
     color:#FBEEE6;
     text-align: center;
     font-size: 35px;

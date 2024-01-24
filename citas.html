@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 
 <head>
@@ -52,20 +53,20 @@
         <ul>
             <li>Proporcione una breve descripción de la razón de su cita.</li><br>
             <li>Utilice este campo para detallar cualquier información relevante para el odontólogo.</li><br>
-            <li>Este campo es obligatorio; asegúrese de proporcionar información útil.</li><br>
+            <li>Este campo es obligatorio; asegúrese de proporcionar información útil, como la hora de llegada al consultorio y el tiempo disponible</li><br>
         </ul>
         <b>Enviar Cita:</b><br>
         <ul>
             <li>Después de completar todos los campos, haga clic en el botón "Enviar Cita" para procesar su solicitud.
             </li><br>
             <li>Revise cuidadosamente la información antes de enviar para asegurarse de que sea precisa.</li><br>
-            <li>Una vez enviado, recibirá una confirmación por correo electrónico.</li><br>
+            <li>Una vez enviado, recibirá una confirmación por correo electrónico o por teléfono</li><br>
         </ul>
         </p>
     </div>
     <div class="seccion-formulario">
         <h2>Contacto</h2>
-        <form action="procesar_cita.php" method="post">
+        <form action="procesar_cita.php" method="post" onsubmit="return validarFormulario()">
             <div class="columnas">
                 <div class="columna">
                     <label for="nombre">Nombre:</label>
