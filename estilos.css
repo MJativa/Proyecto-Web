@@ -808,11 +808,6 @@ th {
 
 
 /*PAGINA CONFIRMACION_CITA.PHP*/
-.mensaje-confirmacion{
-    font-size: 18px;
-    color: #01295C;
-    margin-top: 20px;
-}
 
 .boton-regresar {
     background-color: #01295C;
@@ -824,4 +819,5 @@ th {
     margin-top: 20px;
     display: inline-block;
     cursor: pointer;
+    width: 100px;
   }
