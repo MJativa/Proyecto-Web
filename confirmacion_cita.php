@@ -21,17 +21,11 @@
             </li>
         </ul>
     </nav>
-  <h1>¡Cita Registrada con Éxito!</h1>
+    <h1>¡Cita Registrada con Éxito!</h1>
   <p>Gracias por programar una cita odontológica con nosotros. Su cita ha sido registrada correctamente.</p>
-  <p>Detalles de la cita:</p>
-  <ul>
-    <p>Detalles de la cita:</p>
-    <ul>
-        <li><strong>Nombre:</strong> <?php echo isset($_POST["nombre"]) ? htmlspecialchars($_POST["nombre"]) : "No disponible"; ?></li>
-        <li><strong>Fecha:</strong> <?php echo isset($_POST["fecha"]) ? htmlspecialchars($_POST["fecha"]) : "No disponible"; ?></li>
-        <li><strong>Descripción:</strong> <?php echo isset($_POST["descripcion"]) ? htmlspecialchars($_POST["descripcion"]) : "No disponible"; ?></li>
-    </ul>
-    <p>Recibirás una confirmación por correo electrónico en la dirección <strong><?php echo isset($_POST["correo"]) ? htmlspecialchars($_POST["correo"]) : "No disponible"; ?></strong>.</p><br>
+  <p class="mensaje-confirmacion">Se ha registrado satisfactoriamente.</p>
+  <a href="index.html" class="boton-regresar">Regresar</a><br>
+    <p>Nos pondremos en contacto contigo</p><br>
 
   <a href="index.html" class="boton-regresar">Regresar</a><br>
   <footer class="piepagina">
