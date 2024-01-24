@@ -34,17 +34,17 @@ function eliminarCita(idCita) {
         fetch('eliminar_cita.php?id=' + idCita, {
             method: 'GET',  // Cambiar a GET
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al eliminar la cita');
-            }
-            // Recarga la página después de eliminar la cita
-            location.reload();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error al eliminar la cita');
-        });
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al eliminar la cita');
+                }
+                // Recarga la página después de eliminar la cita
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al eliminar la cita');
+            });
     }
 }
 
@@ -83,4 +83,94 @@ function resetFilters() {
         profile.style.display = ""; // Restablece la visibilidad
     });
     document.getElementById("search-input").value = "";
+}
+
+
+// Función para validar el campo de Nombre
+function validarNombre() {
+    var nombre = document.getElementById("nombre").value;
+    var regex = /^[a-zA-Z\s]+$/;
+
+    if (nombre.trim() === "") {
+        alert("El campo de Nombre es obligatorio.");
+        return false;
+    }
+
+    if (!regex.test(nombre)) {
+        alert("Ingrese un nombre válido sin caracteres especiales ni números.");
+        return false;
+    }
+
+    return true;
+}
+
+// Función para validar el campo de Teléfono
+function validarTelefono() {
+    var telefono = document.getElementById("telefono").value;
+    var regex = /^\d{10}$/;
+
+    if (telefono.trim() === "") {
+        alert("El campo de Teléfono es obligatorio.");
+        return false;
+    }
+
+    if (!regex.test(telefono)) {
+        alert("Ingrese un número de teléfono válido de 10 dígitos.");
+        return false;
+    }
+
+    return true;
+}
+
+// Función para validar el campo de Correo Electrónico
+function validarCorreo() {
+    var correo = document.getElementById("correo").value;
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (correo.trim() === "") {
+        alert("El campo de Correo Electrónico es obligatorio.");
+        return false;
+    }
+
+    if (!regex.test(correo)) {
+        alert("Ingrese una dirección de correo electrónico válida.");
+        return false;
+    }
+
+    return true;
+}
+
+// Función para validar el campo de Fecha
+function validarFecha() {
+    var fecha = document.getElementById("fecha").value;
+
+    if (fecha.trim() === "") {
+        alert("El campo de Fecha es obligatorio.");
+        return false;
+    }
+
+    return true;
+}
+
+// Función para validar el campo de Descripción
+function validarDescripcion() {
+    var descripcion = document.getElementById("descripcion").value;
+
+    if (descripcion.trim() === "") {
+        alert("El campo de Descripción es obligatorio.");
+        return false;
+    }
+
+    return true;
+}
+
+// Función principal para validar todo el formulario antes de enviar
+function validarFormulario() {
+    if (validarNombre() && validarTelefono() && validarCorreo() && validarFecha() && validarDescripcion()) {
+        // Si todas las validaciones son exitosas, se envía el formulario
+        return true;
+    }
+
+    // Si alguna validación falla, se detiene el envío del formulario
+    return false;
 }
