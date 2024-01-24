@@ -761,3 +761,18 @@ th {
     margin-top: 20px;
     text-align: center;
 }
+
+
+/*PAGINA CONFIRMACION_CITA.PHP*/
+
+.boton-regresar {
+    background-color: #01295C;
+    color: #FBEEE6;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    cursor: pointer;
+  }
