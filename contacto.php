@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "codental";
 
     $nombre = $_POST["nombre"];
@@ -34,4 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 } 
 ?>
-

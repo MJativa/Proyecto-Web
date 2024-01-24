@@ -6,7 +6,7 @@ if (isset($_SESSION["usuario"])) {
 
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "codental";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
