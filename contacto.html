@@ -17,9 +17,54 @@
                 <li><a href="citas.html" class="elementoscontacto">Citas</a></li>
                 <li><a href="contacto.html" class="elementoscontacto">Contacto</a></li>
                 <li><a href="portal.html" class="elementoscontacto">Portal</a></li>
+                <li><a href="Odontologos.html" class="elementosnoticias">Odontologos</a></li>
                 </li>
             </ul>
         </nav>
+        <br>
+        <div class="imagennoticia">
+            <img class="imagennoticia"src="contacto1.jpg" alt="Imagen noticia0">
+            <div class="texto-superpuesto">
+                    <p>Contáctenos</p>
+                    <pre>Estaremos gustosos 
+de atenderle</pre>
+            </div>   
+        </div>
+
+        <div class="containerco">
+            <div class="left-side">
+                <h2>Sus comentarios son importantes para nosotros</h2>
+                <div class="line"></div>
+                <p>Comuníquese con nosotros, estamos atentos ante sus requerimientos. Le atenderemos lo antes posible.</p>
+                <p>Dirección: Av. Ordoñez Lasso y Calle Los Pinos,
+                    Cuenca, Azuay, Ecuador</p>
+                <p>Teléfonos: (593) 07-288-5595 | 07-281-4813 | 07-370-0390</p>
+            </div>
+            <div class="right-side">
+                <form action="contacto.php"" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+        
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+        
+                    <label for="tipo_contacto">Tipo de contacto:</label>
+                    <select id="tipo_contacto" name="tipo_contacto">
+                        <option value="contacto">Contacto</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="sugerencia">Sugerencia</option>
+                    </select>
+        
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+        
+                    <button type="submit" >Enviar</button>
+                </form>
+            </div>
+        </div>
         <footer class="piepagina">
             <img src="CoDentalPie.png" alt="Pie de Página">
             <div>
