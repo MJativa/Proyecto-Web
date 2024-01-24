@@ -500,10 +500,16 @@ body .paginicio img{
     
 }
 .atras{
-    font-family: 'Times New Roman', Times, serif;
     padding: 20px;
     margin-top: 20px;
     display: flex;
+}
+
+.atras{
+    background-color: #01295C;
+    color: #FBEEE6;
+    width: 80px;
+    height: 40px;
 }
 /*PAGINA contacto.HTML*/
 .containerco {
