@@ -16,7 +16,6 @@ if (isset($_SESSION["usuario"])) {
     }
 
     // Obtener el ID del doctor
-    // Obtener el ID del doctor
     $sqlDoctor = "SELECT id FROM doctores WHERE usuario = '$doctor'";
     $resultDoctor = $conn->query($sqlDoctor);
 

@@ -32,13 +32,12 @@ function eliminarCita(idCita) {
     if (confirm("¿Estás seguro de que deseas eliminar esta cita?")) {
         // Envía una solicitud al servidor para eliminar la cita con el ID proporcionado
         fetch('eliminar_cita.php?id=' + idCita, {
-            method: 'GET',  // Cambiar a GET
+            method: 'GET',
         })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error al eliminar la cita');
                 }
-                // Recarga la página después de eliminar la cita
                 location.reload();
             })
             .catch(error => {
@@ -217,7 +216,7 @@ function validarFormularioContacto() {
         return true;
     }
 
-    // Llamar a las funciones de validación
+    // Llamar a las funciones de validación para el contacto
     return validarNombre() && validarCorreo() && validarTelefono() && validarMensaje();
 }
 
