@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // CONEXIÓN A LA BASE DE DATOS
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "codental";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
