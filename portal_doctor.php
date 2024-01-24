@@ -16,15 +16,16 @@ if (isset($_SESSION["usuario"])) {
     }
 
     // Obtener el ID del doctor
-    $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor ORDER BY fecha ASC";
-    $resultCitas = $conn->query($sqlCitas);
+    // Obtener el ID del doctor
+    $sqlDoctor = "SELECT id FROM doctores WHERE usuario = '$doctor'";
+    $resultDoctor = $conn->query($sqlDoctor);
 
     if ($resultDoctor->num_rows > 0) {
         $rowDoctor = $resultDoctor->fetch_assoc();
         $idDoctor = $rowDoctor["id"];
 
         // Consulta para obtener las citas asignadas al doctor
-        $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor";
+        $sqlCitas = "SELECT * FROM citas WHERE iddoctor = $idDoctor ORDER BY fecha ASC";
         $resultCitas = $conn->query($sqlCitas);
 
         echo "<!DOCTYPE html>
