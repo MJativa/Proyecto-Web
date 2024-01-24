@@ -589,7 +589,9 @@ button:hover {
     text-align: justify;
     align-items: center;
 }
-
+.list-container p,caption {
+    text-align: justify;
+}
 .list {
     width: calc(100% - 20px);
     margin-top: 20px;
@@ -637,13 +639,13 @@ button:hover {
 /*PAGINA odontologos.HTML*/
 
 #search-input {
+    width: 37%;
     position: absolute;
     top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 15%;
     transform: translate(12%, 70%);
     color: rgb(10, 10, 10);
-    font-size: 3vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw; 
 }
 
 #search-button {
@@ -652,32 +654,35 @@ button:hover {
     left: 57%;
     transform: translate(12%, 70%);
     color: rgb(10, 10, 10);
-    font-size: 3vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    padding: 10px;
+    color: white;
 }
 #reset-button {
     position: absolute;
-    top: 30% , 10%;
+    top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 69%;
     transform: translate(12%, 70%);
     color: rgb(10, 10, 10);
-    font-size: 3vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    color: white;
 }
 
 .profile-container {
-    display: flex;
+    display: grid; /* Cambiado a grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta según tus necesidades */
+    gap: 200px; /* Añadido espacio entre los perfiles */
     justify-content: space-around;
-    flex-wrap: wrap;
     margin-top: 10px;
     padding: 10%;
     text-align: center;
 }
 
 .profile {
-    width: 35%;
-    margin-top: 50px;
-    padding: 15px; 
+    max-width: 400px;
+    min-width: 350px;
+    width: 100%; /* Ancho del 100% para ocupar toda la columna en la cuadrícula */
+    padding: 15px;
     background-color: #FBEEE6;
     border-radius: 25px;
     font-family: 'Times New Roman', Times, serif;
@@ -686,6 +691,12 @@ button:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+}
+@media (max-width: 768px) {
+    .profile {
+        width: calc(50% - 20px); /* Ajusta el ancho para pantallas más pequeñas */
+        margin: 10px; /* Añadido margen general para separar los perfiles */
+    }
 }
 .profile p{
     text-align: left;
@@ -699,7 +710,7 @@ button:hover {
 
 .profile-details {
     margin-top: 10px;
-}
+} 
 
 /* Estilos adicionales para hacerlo responsive */
 @media (max-width: 768px) {
