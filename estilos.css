@@ -183,6 +183,17 @@ body .paginicio img{
     font-size: 35px;
 }
 
+#textocita{
+    color:#FBEEE6;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: small;
+    width: auto;
+    height: auto;
+}
+
 #botoncitas{
     background-color: #0AB0D9;
     color: #FBEEE6;
