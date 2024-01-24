@@ -358,7 +358,6 @@ body .paginicio img{
     background-color: #EF7257;
     border-radius: 25px;
 }
-
 .titulos {
     display: flex;
     justify-content: space-around;
@@ -370,7 +369,7 @@ body .paginicio img{
 }
 
 .titulo {
-    width: 35%;
+    width: 100%; /* Modificado para ocupar toda la línea */
     margin-top: 50px;
     padding: 15px; 
     background-color: #FBEEE6;
@@ -378,14 +377,20 @@ body .paginicio img{
     font-family: 'Times New Roman', Times, serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: #01295C;
-    
+    display: flex; /* Agregado para flexibilidad */
+    justify-content: space-between; /* Agregado para espacio entre elementos */
+    align-items: center; /* Agregado para alinear verticalmente los elementos */
 }
-.titulo a{
+
+.titulo a {
     text-decoration: none;
     color: #01295C;
 }
-.titulo p{
+
+.titulo p {
     text-align: justify;
+    flex: 1; /* Agregado para que la descripción ocupe el espacio restante */
+    margin-left: 20px; /* Agregado para espacio entre imagen y texto */
 }
 
 .titulo img {
@@ -395,6 +400,18 @@ body .paginicio img{
     height: auto; 
     margin-bottom: 10px; 
 }
+
+.elementosnoticias img {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform .2s; 
+}
+
+.elementosnoticias img:hover {
+    transform: scale(1.1); 
+}
+
 .imagennoticia{
     width: 100%;
     height: auto;
@@ -406,14 +423,20 @@ body .paginicio img{
     position: absolute;
     top: calc(50% + (10% - 50%) * (1 - (min(100%, 80vw) - 300px) / (800 - 300)));
     left: 35%;
-    transform: translate(-50%, -110%);
+    transform: translate(-50%, -105%);
     color: white;
-    font-size: 4vw;
+    
     font-family:sans-serif;    
 }
-.texto-superpuesto p, pre{
-    font-weight: 800;
-    color: white;
+.texto-superpuesto  pre{
+    font-weight: 700;
+    color: #01295C;
+    font-size: 4vw;
+}
+.texto-superpuesto p{
+    font-size: 4vw;
+    font-weight: 850;
+    color: #01295C;
 }
 /*PAGINA NOTICIAS1.HTML*/
 .menu a.elementosnoticias1:hover{
@@ -536,17 +559,23 @@ button:hover {
 }
 /* ubicacion*/
 .map-container {
-    width: 100%;
+    width: 95%;
     height: 450px;
     margin-bottom: 20px;
+    margin: 40px; 
+    
 }
-
+.descripcionu {
+    display: none;
+}
 .list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 10px;
     padding: 10px;
+    text-align: justify;
+    align-items: center;
 }
 
 .list {
@@ -580,12 +609,17 @@ button:hover {
     background-color: #f2f2f2;
 }
 
-.list .description {
-    display: block;
+.list .descripcion {
+    text-align: left;
+}
+
+.descripcion img{
+    text-align: right;
 }
 
 .list:not(.active) .description {
     display: none;
+    
 }
 
 /*PAGINA odontologos.HTML*/

@@ -55,9 +55,12 @@ function modificarCita(idCita) {
 }
 
 function toggleDescription(id) {
-    var description = document.getElementById(id);
-    description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
-    
+    var descripcion = document.getElementById(id);
+    if (descripcion.style.display === "none" || descripcion.style.display === "") {
+        descripcion.style.display = "block";
+    } else {
+        descripcion.style.display = "none";
+    }
 }
 
 function searchProfiles() {
