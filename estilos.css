@@ -528,3 +528,13 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+.mensaje-error {
+    background-color: #ff8c8c; /* Color de fondo rojo */
+    color: #FBEEE6; /* Color de texto oscuro */
+    padding: 15px;
+    border: 1px solid #f5c6cb; /* Borde rojo más oscuro */
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
